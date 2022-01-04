@@ -1,23 +1,18 @@
 import cv2
-import numpy
 
-img = cv2.imread("color.png")
+# Read Image
+img = cv2.imread("butterfly.jpg")
 
-gray = cv2.cvtColor(img,cv2.COLOR_RGB2GRAY)
+# Display Colored Image
+cv2.imshow("Display Image",img)
 
-cv2.imshow("output",img)
-cv2.imshow("Grayscale",gray)
+# Convert Colored Image To Grayscale
+gray_img = cv2.cvtColor(img,cv2.COLOR_RGB2GRAY)
 
-print(img.shape)
-print(gray.shape)
+# Display Grayscale Image
+cv2.imshow("Grayscale", gray_img)
+
+
+#print(gray_img)
 
 cv2.waitKey(0)
-
-
-
-
-
-
-
-
-
